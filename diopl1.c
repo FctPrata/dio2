@@ -3,10 +3,8 @@
 
 // Função que calcula o saldo de vitórias e determina o nível do jogador
 void calcularNivel(int vitorias, int derrotas, int *saldoVitorias, char *nivel) {
-    // Calcula o saldo de vitórias
     *saldoVitorias = vitorias - derrotas;
 
-    // Determina o nível com base no número de vitórias
     if (vitorias <= 10) {
         strcpy(nivel, "Ferro");
     } else if (vitorias <= 20) {
@@ -34,10 +32,9 @@ int main() {
     printf("Digite o numero de derrotas: ");
     scanf("%d", &derrotas);
 
-    // Chama a função para calcular o saldo de vitórias e determinar o nível
+    // Chama a função
     calcularNivel(vitorias, derrotas, &saldoVitorias, nivel);
 
-    // Exibe a mensagem final com o saldo de vitórias e o nível do jogador
     printf("O Heroi tem um saldo de %d e esta no nivel %s\n", saldoVitorias, nivel);
 
     return 0;
